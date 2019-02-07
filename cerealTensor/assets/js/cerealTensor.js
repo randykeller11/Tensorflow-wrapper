@@ -425,7 +425,7 @@ start();
 
 //build tensors function
 //tensorflow.js works by doing complex matrix math on a specific kind of array called a tensor
-//this function below takes the arrays of training and test data and makes thm into tensors for the model
+//this function below takes the arrays of training and test data and makes them into tensors for the model
 //if you are adapting this template for other predictive modeling scenarios I encourage you look into uint8 and see if it fits your needs
 
 
@@ -476,12 +476,12 @@ model.compile({
     loss: 'meanSquaredError'
 });
 
-//finally the config variable says how many epochs should the model train for
+//finally the config variable says how many epochs the model should train for
 const config = {
     epochs: 100
 };
 
-//The train function uses the compiled model to fit the train x's to train ys and log the diminishing loss as it goes
+//The train function uses the compiled model to fit the train x's to train ys and log the diminishing loss in the console
 async function train(){
     for(var i = 0; i <= 50; i++){
         const response = await model.fit(tf_train_xs, tf_train_ys, config);
