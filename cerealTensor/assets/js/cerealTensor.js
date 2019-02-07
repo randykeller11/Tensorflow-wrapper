@@ -348,7 +348,6 @@ function shuffle(array) {
 };  
 
 //make data function
-//test variables start with arbitraty data to stop error message from tensor function below
 var test_x = [];
 var test_y = [];
 var test_start_y = [];
@@ -386,7 +385,9 @@ function makeData(){
 function build_train_y(){
     for (var i = 0; i < train_start_y.length; i++){
     if (train_start_y[i] === 1){
-        //to add more y possibilities push as many numbers as possiblities all 0 aside from correct answer
+        //to add more y possibilities push as many extra 0s as you have possiblities. The model prediction will return a percentage for each value of the models certainty
+        //using this example if a cereal is less healthy and has a score of 2 it is given to the model as (0,1,0)
+        //the model if trained well will return its predictions like (.12111, .95333, .2322) which indicates it has the highest certainty the score is 2 or (0,1,0)
         train_y.push(1,0,0);
     } else if (train_start_y[i] === 2){
         train_y.push(0,1,0);
