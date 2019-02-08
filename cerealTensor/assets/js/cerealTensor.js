@@ -1,4 +1,4 @@
-// array of cereals w/ variables (fiber, sugar and 1= h/ 2= less h/ 3= unhealthy)
+// array of cereals w/ variables (fiber, sugar and 1= healthy 2= less healthy 3= unhealthy)
 
 var cerealTest = [
 {
@@ -426,7 +426,8 @@ start();
 //build tensors function
 //tensorflow.js works by doing complex matrix math on a specific kind of array called a tensor
 //this function below takes the arrays of training and test data and makes them into tensors for the model
-//if you are adapting this template for other predictive modeling scenarios I encourage you look into uint8 and see if it fits your needs
+//if you are adapting this template for other predictive modeling scenarios I encourage you to look into uint8 as well as
+//other kinds of data types to see what will best fit your needs
 
 
 const tf_test_xs = tf.tensor2d(Uint8Array.from(test_x), [8, 2]);
