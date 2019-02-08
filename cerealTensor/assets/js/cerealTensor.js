@@ -347,7 +347,7 @@ function shuffle(array) {
   return array;
 };  
 
-//make data function
+//data will be sorted into these variables before being turned into tensors for the machine learning model
 var test_x = [];
 var test_y = [];
 var test_start_y = [];
